@@ -1,4 +1,5 @@
 h1. Shadchan
+
 This gem provides a class for solving the 
 "Stable Marriage problem":http://en.wikipedia.org/wiki/Stable_marriage_problem
 
@@ -12,6 +13,5 @@ h2. Usage
 shadchan = Shadchan::Shadchan.new [0, 2, 1], [2, 0, 1], [0, 2, 1], [1, 0, 2], [0, 2, 1], [0, 1, 2]
 shadchan.match # => [[0, 2], [1, 0], [2, 1]]
 shadchan.match_men = [1, 2, 0]
-shadchan.match_women = [2, 0, 1]
-</pre>
+shadchan.match_women = [2, 0, 1]</pre>
 
