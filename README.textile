@@ -1,7 +1,6 @@
 h1. Shadchan
 
-This gem provides a class for solving the 
-"Stable Marriage problem":http://en.wikipedia.org/wiki/Stable_marriage_problem
+This gem provides a class for solving the "Stable Marriage problem":http://en.wikipedia.org/wiki/Stable_marriage_problem and "Stable Roommates problem":http://en.wikipedia.org/wiki/Stable_roommates_problem. 
 
 
 h2. Installation
@@ -10,9 +9,14 @@ h2. Installation
 h2. Usage
 
 <pre>require 'shadchan'
-
+# stable marriage example
 shadchan = Shadchan::Shadchan.new [0, 2, 1], [2, 0, 1], [0, 2, 1], [1, 0, 2], [0, 2, 1], [0, 1, 2]
-shadchan.match # => [[0, 2], [1, 0], [2, 1]]
-shadchan.match_men = [1, 2, 0]
-shadchan.match_women = [2, 0, 1]</pre>
+shadchan.match #=> [[0, 2], [1, 0], [2, 1]]
+shadchan.match_men #=> [1, 2, 0]
+shadchan.match_women #=> [2, 0, 1]
+
+# stable roommates example
+roomie = Shadchan::Roomie.new [2,3,1,5,4],[5,4,3,0,2],[1,3,4,0,5],[4,1,2,5,0],[2,0,1,3,5],[4,0,2,3,1]
+roomie.match #=> [5,4,3,1,2,0]
+</pre>
 
